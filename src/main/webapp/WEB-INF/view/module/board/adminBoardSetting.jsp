@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>Admin Login</title>
+<title>Admin Board Setting</title>
 </head>
 <body>
-	Admin Login
+	Admin Board Setting
 </body>
 </html>
