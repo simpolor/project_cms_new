@@ -1,5 +1,2 @@
-INSERT INTO demo(name, age, hobby)
-     VALUES ('하니', 14, '달리기');
-     
-INSERT INTO demo(name, age, hobby)
-     VALUES ('홍길동', 18, '반항');
+INSERT INTO member(member_id, member_pw, member_name, member_nickname, member_email)
+     VALUES ('test', 'test', '테스트', '테스트', 'test@test.com');
