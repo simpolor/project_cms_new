@@ -2,12 +2,10 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <!-- <package name="com.simpolor.cms.model" />-->
-        <typeAlias alias="demo" type="com.devluff.cms.model.Demo" />
+        <typeAlias alias="member" type="com.devluff.cms.module.member.model.Member" />
     </typeAliases>
     
-    
     <mappers>
-        <mapper resource="mybatis/mapper/demo.xml"/>
+        <mapper resource="mybatis/mapper/member/member.xml"/>
     </mappers>
 </configuration>

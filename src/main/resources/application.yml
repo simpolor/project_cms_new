@@ -6,9 +6,9 @@ spring:
       
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/demo_db
-    username: demo
-    password: demo
+    url: jdbc:mysql://localhost:3306/devluff_cms
+    username: devluff
+    password: devluff
         
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
