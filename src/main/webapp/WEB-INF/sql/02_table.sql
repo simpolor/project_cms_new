@@ -15,3 +15,13 @@ CREATE TABLE `member` (
 	`del_yn` CHAR(1) NOT NULL DEFAULT 'N' COMMENT '탈퇴유무',
 	PRIMARY KEY (`member_id`)
 );
+
+CREATE TABLE `member_role` (
+	`member_id` VARCHAR(50) NULL DEFAULT NULL,
+	`role_code` VARCHAR(50) NULL DEFAULT NULL
+);
+
+CREATE TABLE `authority` (
+	`role_name` VARCHAR(50) NULL DEFAULT NULL,
+	`role_code` VARCHAR(50) NULL DEFAULT NULL
+);
