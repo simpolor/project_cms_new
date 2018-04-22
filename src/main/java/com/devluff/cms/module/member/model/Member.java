@@ -11,6 +11,8 @@ public class Member {
 	private String member_nickname;
 	private String member_email;
 	
+	private String member_role;
+	
 	private String reg_id;
 	private String reg_name;
 	private String reg_nickname;
@@ -77,6 +79,14 @@ public class Member {
 
 	public void setMember_email(String member_email) {
 		this.member_email = member_email;
+	}
+
+	public String getMember_role() {
+		return member_role;
+	}
+
+	public void setMember_role(String member_role) {
+		this.member_role = member_role;
 	}
 
 	public String getReg_id() {

@@ -15,4 +15,5 @@ public interface MemberMapper {
 	
 	Member selectLoginMember(Member member);
 	
+	List<String> selectMemberRole(String member_id);
 }

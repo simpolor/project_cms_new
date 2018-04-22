@@ -13,7 +13,7 @@ import com.devluff.cms.module.member.model.Member;
 import com.devluff.cms.module.member.service.MemberService;
 
 @Controller
-public class AdminLoginController {
+public class AdminLoginController{
 	
 	@Autowired
 	MemberService memberService;
@@ -66,5 +66,4 @@ public class AdminLoginController {
 		
 		return mav;
 	}
-
 }
