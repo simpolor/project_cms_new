@@ -13,11 +13,10 @@
           FROM member
     </select>
     
-    <select id="selectLoginMember" parameterType="member" resultType="member">
+    <select id="selectLoginMember" parameterType="string" resultType="member">
         SELECT *
           FROM member
          WHERE member_id = #{member_id}
-           AND member_pw = #{member_pw}
     </select>
     
     <select id="selectMemberRole" parameterType="string" resultType="string">

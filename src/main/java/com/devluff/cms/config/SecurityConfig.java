@@ -1,15 +1,10 @@
 package com.devluff.cms.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -25,18 +20,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/admin/login").permitAll()	
 			.antMatchers("/admin/**").hasRole("ADMIN")
 			.antMatchers("/**").permitAll();
+		
+		http.formLogin()
+        	.loginPage("/admin/login")
+        	.loginProcessingUrl("/admin/login")
+        	.failureUrl("/login")
+        	.defaultSuccessUrl("/admin/member/list", true)
+        	.usernameParameter("id")
+        	.passwordParameter("password");
+
+		http.logout()
+        	.logoutRequestMatcher(new AntPathRequestMatcher("/admin/logout"))
+        	.logoutSuccessUrl("/")
+        	.invalidateHttpSession(true);
 	}
 	
-	@Bean
-    @Override
-    public UserDetailsService userDetailsService() {
-        UserDetails user =
-             User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("password")
-                .roles("ADMIN")
-                .build();
-
-        return new InMemoryUserDetailsManager(user);
-    }
 }

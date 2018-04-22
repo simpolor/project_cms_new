@@ -13,7 +13,7 @@ public interface MemberService {
 	
 	public List<Member> getMemberList();
 	
-	public Member getLoginMember(Member member);
+	public Member getLoginMember(String member_id, String member_pw);
 	
 	public Collection<GrantedAuthority> getAuthorities(String member_id);
 

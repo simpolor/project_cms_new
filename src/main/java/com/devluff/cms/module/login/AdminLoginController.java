@@ -28,8 +28,8 @@ public class AdminLoginController{
 		return mav;
 	}
 	
-	@RequestMapping(value="/admin/login", method=RequestMethod.POST )
-	public ModelAndView login(Member member) {
+	//@RequestMapping(value="/admin/login", method=RequestMethod.POST )
+	/*public ModelAndView login(Member member) {
 		
 		
 		Member loginMember = memberService.getLoginMember(member);
@@ -45,7 +45,7 @@ public class AdminLoginController{
 		mav.setViewName("redirect:/admin/login");
 		
 		return mav;
-	}
+	}*/
 	
 	@RequestMapping(value="/admin/login/setting", method=RequestMethod.GET )
 	public ModelAndView loginSettingForm() {

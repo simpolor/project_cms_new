@@ -13,7 +13,7 @@ public interface MemberMapper {
 	
 	List<Member> selectMemberList();
 	
-	Member selectLoginMember(Member member);
+	Member selectLoginMember(String member_id);
 	
 	List<String> selectMemberRole(String member_id);
 }

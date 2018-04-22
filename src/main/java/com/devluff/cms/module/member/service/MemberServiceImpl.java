@@ -29,8 +29,14 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Member getLoginMember(Member member) {
-		return memberMapper.selectLoginMember(member);
+	public Member getLoginMember(String member_id, String member_pw) {
+		
+		Member member = memberMapper.selectLoginMember(member_id);
+		
+		if(member == null) return null;
+		if(member.getMember_pw().equals(member_pw) == false) return null;
+
+		return member ;
 	}
 
 	@Override
