@@ -1,4 +1,4 @@
-package com.devluff.cms.module.auth.model;
+package com.devluff.cms.auth.model;
 
 public class Authority {
 	
